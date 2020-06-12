@@ -59,11 +59,11 @@ gem 'awesome_print', require: 'ap'
 # ENV
 gem 'figaro'
 
-# Sign in Sign out
-gem 'devise'
-
 # Soft delete
 gem 'paranoia', '~> 2.2'
 
 # Database Admin
 gem 'rails_admin'
+
+# Sign in Sign out
+gem 'devise'
