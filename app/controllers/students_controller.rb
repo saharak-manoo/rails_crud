@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
     if student.save
       render json: { data: student }, status: 201
     else
-      render json: { data: student&.errors&.full_messages&.to_sentence }, status: 400
+      render json: { error: student&.errors&.full_messages&.to_sentence }, status: 400
     end
   end
 
