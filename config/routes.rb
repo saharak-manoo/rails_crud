@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  root to: 'students#index'
+
+  resources :students do
+    # member ก็คือจะได้ path /students/:id/:new_path
+    member do
+      post 'add_course'
+    end
+  end
 end
